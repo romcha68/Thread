@@ -3,7 +3,7 @@ package com.brainacad.oop.testthread4;
 /**
  * Created by User on 19.02.2018.
  */
-public class MySumCount extends Thread{
+public class MySumCount implements Runnable{
 
         private int startIndex;
         private int stopIndex;
