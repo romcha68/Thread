@@ -8,7 +8,6 @@ import java.util.Random;
  */
 public class Main {
     public static void main(String[] args) {
-
         int[] myArray = new int[1000];
         MySumCount mySumCount1 = new MySumCount();
         MySumCount mySumCount2 = new MySumCount();
@@ -19,25 +18,16 @@ public class Main {
         }
 
         mySumCount1.setStartIndex(5);
-        mySumCount2.setStartIndex(500);
+        mySumCount2.setStartIndex(5);
 
-        mySumCount1.setStopIndex(700);
-        mySumCount2.setStopIndex(900);
+        mySumCount1.setStopIndex(500);
+        mySumCount2.setStopIndex(500);
 
         mySumCount1.setMyArray(myArray);
         mySumCount2.setMyArray(myArray);
 
         mySumCount1.start();
         mySumCount2.start();
-
-        try {
-
-            mySumCount1.join();
-            mySumCount2.join();
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
         System.out.println("myArray = " + Arrays.toString(myArray));
         System.out.println("Sum1 of array element: " + mySumCount1.getResultSum());

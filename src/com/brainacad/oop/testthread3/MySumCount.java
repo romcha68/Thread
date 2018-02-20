@@ -1,5 +1,8 @@
 package com.brainacad.oop.testthread3;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /**
  * Created by User on 19.02.2018.
  */
@@ -37,11 +40,11 @@ public class MySumCount extends Thread {
         return this.resultSum;
     }
 
+    @Override
     public void run() {
-
         this.resultSum = 0;
-        for (int i = this.startIndex; i < this.stopIndex + 1; i++) {
-            this.resultSum = this.resultSum + this.myArray[i];
+        for (int i = this.startIndex; i < this.stopIndex; i++) {
+            this.resultSum += this.myArray[i];
 
         }
     }
